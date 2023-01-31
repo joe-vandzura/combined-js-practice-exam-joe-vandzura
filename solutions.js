@@ -11,7 +11,7 @@
 
 // Question 1
 function isBoolean(input) {
-        return input === true || input === false
+    return input === true || input === false
 }
 
 console.log(isBoolean(42)); // outputs false
@@ -19,7 +19,7 @@ console.log(isBoolean("true")); // outputs false
 console.log(isBoolean(false)); // outputs true
 
 
-// Quesstion 2
+// Question 2
 function hasBoolean(array) {
     return array.filter(element => element === true || element === false).length > 0;
 }
@@ -29,7 +29,7 @@ console.log(hasBoolean([1, "false", 3, 4])); // outputs false
 console.log(hasBoolean([1, 2, true, 4])); // outputs true
 
 
-const people = [ {
+const people = [{
     name: "Bob",
     age: 42
 }, {
@@ -91,3 +91,39 @@ name: "Jimbob",
 age: 22
 }
 */
+
+
+// Question 6
+$("#bold-btn").click(function () {
+    $(this).css("font-weight", "bold");
+});
+
+
+// Question 7
+$("#reload-btn").click(function () {
+    location.reload();
+});
+
+
+// Question 8
+$(".loud-item").click(function () {
+    alert($(this).text());
+});
+
+
+// Question 9
+$(".data-item").hover(
+    function () {
+        $("#data-display").text($(this).attr("data-id"));
+    },
+    function () {
+        $("#data-display").text("");
+    });
+
+
+// Question 10
+$("#change-text-btn").click(function() {
+    let colorInput = $("#change-text-input")[0].value;
+    $(this).css("color", colorInput);
+    $("#change-text-input")[0].value = "";
+});
